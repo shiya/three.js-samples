@@ -19,7 +19,6 @@ function init() {
   scene = new THREE.Scene();
 
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-  camera.position.z = 1000;
 
   controls = new THREE.DeviceOrientationControls( camera );
 
@@ -61,18 +60,10 @@ function init() {
 function animate() {
 
     requestAnimationFrame( animate );
-
-    // controls.update();
+    controls.update();
 
     for (var i = 0; i < particleCount; i++) {
-      // particles[i].position.x += particles[i].direction.x;
       particles[i].position.y -= particles[i].velocity.y * 3;
-
-      // if edge is reached, bounce back
-      // if (particles[i].position.x < -window.innerWidth ||
-      // particles[i].position.x > window.innerWidth) {
-      //   particles[i].direction.x = -particles[i].direction.x;
-      // }
       if (particles[i].position.y < -window.innerHeight ||
       particles[i].position.y > window.innerHeight) {
         particles[i].position.y = window.innerHeight;
