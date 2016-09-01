@@ -21,14 +21,12 @@ function init() {
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
   camera.position.z = 1000;
 
+  controls = new THREE.DeviceOrientationControls( camera );
+
   renderer = new THREE.WebGLRenderer();
   renderer.setClearColor( 0x202F40, 1);
   renderer.setSize( window.innerWidth, window.innerHeight );
 
-  controls = new THREE.OrbitControls( camera, renderer.domElement );
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.25;
-  controls.enableZoom = false;
 
   // create a random set of particles
   for (var i = 0; i < particleCount; i++) {
@@ -64,7 +62,7 @@ function animate() {
 
     requestAnimationFrame( animate );
 
-    controls.update();
+    // controls.update();
 
     for (var i = 0; i < particleCount; i++) {
       // particles[i].position.x += particles[i].direction.x;
