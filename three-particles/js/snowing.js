@@ -26,7 +26,6 @@ function init() {
   renderer.setClearColor( 0x202F40, 1);
   renderer.setSize( window.innerWidth, window.innerHeight );
 
-
   // create a random set of particles
   for (var i = 0; i < particleCount; i++) {
 

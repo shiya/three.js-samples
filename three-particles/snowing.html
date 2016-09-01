@@ -6,10 +6,24 @@
 		<style>
 			body { margin: 0px; overflow: hidden; }
 			canvas { width: 100%; height: 100% }
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family:Monospace;
+				font-size:13px;
+				font-weight: bold;
+				text-align:center;
+			}
+			a {
+				color: white;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="canvas"></div>
+		<div id="info"><a href="https://github.com/shiya/three.js-samples/blob/gh-pages/three-particles/js/snowing.js" target="_blank">Source Code</a></div>
 		<script src="../three/three.min.js"></script>
 		<script src="../three/DeviceOrientationControls.js"></script>
 		<script src="js/snowing.js"></script>
