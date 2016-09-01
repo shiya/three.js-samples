@@ -2,8 +2,8 @@ var scene, camera, renderer, controls;
 var canvas = document.getElementById('canvas');
 
 // particles set up
-var particleCount = 300;
-var particleGeometry = new THREE.SphereGeometry(10, 32, 32); // size, number of polys to form this circle
+var particleCount = 1000;
+var particleGeometry = new THREE.SphereGeometry(5, 32, 32); // size, number of polys to form this circle
 var particleMaterial = new THREE.MeshBasicMaterial({
   color: 0xFFFFFF,
   transparent: true,
@@ -18,7 +18,7 @@ function init() {
 
   scene = new THREE.Scene();
 
-  camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+  camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
 
   controls = new THREE.DeviceOrientationControls( camera );
 
