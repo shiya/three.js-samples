@@ -1,5 +1,4 @@
 var scene, camera, renderer, controls;
-var geometry, material, mesh;
 var canvas = document.getElementById('canvas');
 
 // particles set up
@@ -81,5 +80,4 @@ function animate() {
     }
 
     renderer.render( scene, camera );
-
 }
