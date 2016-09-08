@@ -7,8 +7,8 @@
   var particles = [];
 
   init();
-  // fillScene();
-  // animate();
+  fillScene();
+  animate();
 
   function fillScene() {
 
