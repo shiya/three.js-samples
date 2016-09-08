@@ -58,7 +58,6 @@ function init() {
   controls.enableZoom = false;
 
   canvas.appendChild( renderer.domElement );
-  fillScene();
   renderer.render( scene, camera );
 }
 
