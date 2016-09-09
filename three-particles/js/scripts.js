@@ -7,7 +7,6 @@
   var particles = [];
 
   init();
-  fillScene();
   animate();
 
   function fillScene() {
@@ -25,13 +24,9 @@
       particles[i] = new THREE.Mesh( particleGeometry, particleMaterial );
 
       //randomize positions
-      var px = Math.random() * window.innerWidth * 2 - window.innerWidth;
-      var py = Math.random() * window.innerHeight * 2 - window.innerHeight;
-      var pz = Math.random() * window.innerWidth * 2 - window.innerWidth;
-
-      particles[i].position.x = px;
-      particles[i].position.y = py;
-      particles[i].position.z = pz;
+      particles[i].position.x = Math.random() * window.innerWidth * 2 - window.innerWidth;;
+      particles[i].position.y = Math.random() * window.innerHeight * 2 - window.innerHeight;
+      particles[i].position.z = Math.random() * window.innerWidth * 2 - window.innerWidth;
 
       particles[i]. direction = {
         x: Math.random(),
@@ -57,6 +52,7 @@
     controls.dampingFactor = 0.25;
     controls.enableZoom = false;
 
+    fillScene();
     canvas.appendChild( renderer.domElement );
     renderer.render( scene, camera );
   }
